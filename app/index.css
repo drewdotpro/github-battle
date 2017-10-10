@@ -1,0 +1,186 @@
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+    font-size: 1.2em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.languages {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.languages li {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+.languages li.selected {
+    color: #d0021b;
+}
+
+.popularList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.popular-item {
+    flex: 1 0 15em;
+    margin: 1em;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.popular-rank {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0.8em;
+}
+
+.space-list-items {
+    margin-bottom: 0.7em;
+}
+
+.space-list-items li.popular-text{
+    font-size: 0.8em;
+}
+
+.avatar {
+    width: 15em;
+    border-radius: 50%;
+}
+
+.space-list-items li img.avatar {
+    width: 10em;
+}
+
+.battle-image {
+    width: 75%;
+    border-radius: 5%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    width: 100%;
+}
+
+
+.active {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #d0021b;
+}
+
+.button {
+    color: #e6e6e6;
+    background: #0a0a0a;
+    border: none;
+    font-size: 1.4em;
+    border-radius: 0.3em;
+    width: 15em;
+    text-align: center;
+    display: block;
+    padding: 0.7em 0;
+    margin: 1em auto;
+}
+
+.button:hover:enabled {
+    background: linear-gradient(#1a1a1a,#0a0a0a);
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column input {
+    border-radius:0.3em;
+    margin: 1em 0;
+    padding: 0.5em;
+    border: 0.1em solid rgba(0, 0, 0, 0.43);
+    font-size: 1.6em;
+    width: 80%;
+}
+
+.column label {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 200;
+}
+
+.header {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 200;
+}
+
+.reset {
+    border: none;
+    background: transparent;
+    color: #d0021b;
+    display: block;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.reset:hover {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+.full {
+    width: 100%;
+}
