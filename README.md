@@ -1,6 +1,6 @@
 # GitHub Battle
 
-Live Demonstration is [available here](https://react.drew.pro/)
+Live Demonstration is [available here](http://react.drew.pro/)
 
 ![Github Battle](https://github.com/drewdotpro/github-battle/raw/master/app/assets/battle.png "GitHub Battle")
 
