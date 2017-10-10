@@ -52,6 +52,7 @@ class Information extends React.Component {
                     alt={"Project Page for " + title}>
                 </img>}
                 <a className='button' href={url} target="_blank">{linkText}</a>
+                <a href="http://drew.pro" target="_blank">LinkedIn Profile</a>
             </div>
         );
     }

@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const HTMLWebpackPluginConfig = {
     template: "app/index.html"
@@ -32,7 +33,10 @@ const config = {
     },
     plugins: [
         new HTMLWebpackPlugin(HTMLWebpackPluginConfig),
-        new FaviconsWebpackPlugin('./app/assets/react-large.png')
+        new FaviconsWebpackPlugin('./app/assets/react-large.png'),
+        new CopyWebpackPlugin([
+            { from: './app/assets/social.png', to: "social.png" }
+        ])
     ]
 };
 

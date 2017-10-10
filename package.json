@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack -p",
     "surge": "cross-env NODE_ENV=production SURGE_PUB=true webpack -p",
-    "deploy": "npm run surge && surge ./dist github-battle-drewdotpro.surge.sh"
+    "deploy": "npm run surge && surge ./dist react.drew.pro"
   },
   "author": "Drew Llewellyn <drew@drew.pro> (http://drew.pro)",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "query-string": "^5.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
     "whatwg-fetch": "^2.0.3"
   },
@@ -27,6 +28,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.1.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "favicons-webpack-plugin": "0.0.7",
