@@ -94,7 +94,7 @@ class Battle extends React.Component {
                     <PlayerInput
                         id="playerOne"
                         label="Player One"
-                        placeholder="GitHub Username, eg. drewdotpro"
+                        placeholder="GitHub, eg. drewdotpro"
                         onSubmit={this.handleSubmit}
                     />
                     }
@@ -117,7 +117,7 @@ class Battle extends React.Component {
                     <PlayerInput
                         id="playerTwo"
                         label="Player Two"
-                        placeholder="GitHub Username, eg. phil"
+                        placeholder="GitHub, eg. phil"
                         onSubmit={this.handleSubmit}
                     />
                     }
