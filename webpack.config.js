@@ -3,6 +3,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const HTMLWebpackPluginConfig = {
     template: "app/index.html"
@@ -23,13 +24,16 @@ const config = {
         rules: [
             {test: /\.(js)$/, use: "babel-loader"},
             {test: /\.css$/, use: ["style-loader", "css-loader"]},
-            { test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/, loader: "file-loader" }
+            { test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3|ico)$/, loader: "file-loader" }
         ]
     },
     devServer: {
         historyApiFallback: true
     },
-    plugins: [new HTMLWebpackPlugin(HTMLWebpackPluginConfig)]
+    plugins: [
+        new HTMLWebpackPlugin(HTMLWebpackPluginConfig),
+        new FaviconsWebpackPlugin('./app/assets/react-large.png')
+    ]
 };
 
 if (process.env.NODE_ENV === "production") {

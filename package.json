@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
-    "build": "set NODE_ENV=production&&webpack -p",
-    "surge": "set NODE_ENV=production&&set SURGE_PUB=true&&webpack -p",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "surge": "cross-env NODE_ENV=production SURGE_PUB=true webpack -p",
     "deploy": "npm run surge && surge ./dist github-battle-drewdotpro.surge.sh"
   },
   "author": "Drew Llewellyn <drew@drew.pro> (http://drew.pro)",
@@ -27,7 +27,9 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "favicons-webpack-plugin": "0.0.7",
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.18.2",
