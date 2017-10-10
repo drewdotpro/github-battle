@@ -9,10 +9,12 @@ class PlayerInput extends React.Component {
     static propTypes = {
         id: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
+        plceholder: PropTypes.string.isRequired,
         onSubmit: PropTypes.func.isRequired
     };
     static defaultProps = {
-        label: "Username"
+        label: "Username",
+        placeholder: "GitHub Username"
     };
     state = {
         username: ""
@@ -31,7 +33,7 @@ class PlayerInput extends React.Component {
     render() {
 
         const {username} = this.state;
-        const {label} = this.props;
+        const {label, placeholder} = this.props;
 
         return (
             <form className="column" onSubmit={this.handleSubmit}>
@@ -40,7 +42,7 @@ class PlayerInput extends React.Component {
                 </label>
                 <input
                     id="username"
-                    placeholder="GitHub Username"
+                    placeholder={placeholder}
                     type="text"
                     autoComplete="off"
                     value={username}
@@ -92,6 +94,7 @@ class Battle extends React.Component {
                     <PlayerInput
                         id="playerOne"
                         label="Player One"
+                        placeholder="GitHub Username, eg. drewdotpro"
                         onSubmit={this.handleSubmit}
                     />
                     }
@@ -114,6 +117,7 @@ class Battle extends React.Component {
                     <PlayerInput
                         id="playerTwo"
                         label="Player Two"
+                        placeholder="GitHub Username, eg. phil"
                         onSubmit={this.handleSubmit}
                     />
                     }

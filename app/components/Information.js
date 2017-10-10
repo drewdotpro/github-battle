@@ -13,11 +13,14 @@ const styles = {
         "borderRadius": "25px",
         "border": "2px solid #73AD21",
         "padding": "20px",
-        "width": "80%"
+        "width": "80%",
     },
     "image": {
         "width": "150px",
         "borderRadius": "50%"
+    },
+    "middle": {
+        "textAlign": "center"
     }
 };
 
@@ -43,7 +46,7 @@ class Information extends React.Component {
 
         return (
             <div style={styles.content}>
-                <h2>{title}</h2>
+                <h2 style={styles.middle}>{title}</h2>
                 <p>{info}</p>
                 {image &&
                 <img
@@ -52,7 +55,7 @@ class Information extends React.Component {
                     alt={"Project Page for " + title}>
                 </img>}
                 <a className='button' href={url} target="_blank">{linkText}</a>
-                <a href="http://drew.pro" target="_blank">LinkedIn Profile</a>
+                <a style={styles.middle} href="http://drew.pro" target="_blank">LinkedIn Profile</a>
             </div>
         );
     }
